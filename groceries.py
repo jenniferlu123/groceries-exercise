@@ -70,7 +70,9 @@ unique_departments.sort()
 
 
 for d in unique_departments:
-    print(d.title())
+    matching_products = [p for p in products if p["department"] == d]
+    matching_products_count = len(matching_products)   
+    print(d.title() + " (" + str(matching_products_count) + " products)")
 
 # + All-Seasons Salt ($4.99)
 # + Chocolate Fudge Layer Cake ($18.50)
