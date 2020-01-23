@@ -34,11 +34,17 @@ print(products)
 
 print("--------------")
 print("THERE ARE", len(products), "PRODUCTS:")
-print("THERE ARE " + str(len(products)) + " PRODUCTS") #will give an error bc there are two dif data type
-print(f"THERE ARE {len(products)} PRODUCTS")
+#print("THERE ARE " + str(len(products)) + " PRODUCTS") #will give an error bc there are two dif data type
+#print(f"THERE ARE {len(products)} PRODUCTS")
 print("--------------")
 
-for p in products:
+
+def sorted_by_name(any_product):
+    return any_product["name"]
+
+sorted_products = sorted(products, key=sorted_by_name)
+
+for p in sorted_products:
     price_usd = "${0:.2f}".format(p["price"])
     print(" + " + p["name"] + " (" + str(price_usd) + ")")
 
