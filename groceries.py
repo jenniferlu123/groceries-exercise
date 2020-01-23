@@ -30,7 +30,7 @@ print(products)
 
 # TODO: write some Python code here to produce the desired output
 
-
+#Products Part 1
 
 print("--------------")
 print("THERE ARE", len(products), "PRODUCTS:")
@@ -47,6 +47,20 @@ sorted_products = sorted(products, key=sorted_by_name)
 for p in sorted_products:
     price_usd = "${0:.2f}".format(p["price"])
     print(" + " + p["name"] + " (" + str(price_usd) + ")")
+
+
+#Products Part 2
+
+departments = []
+for p in products:
+    if p["department"] not in departments:
+        departments.append(p["department"])
+
+department_count = len(departments)
+
+print("--------------")
+print("THERE ARE " + str(department_count) + " DEPARTMENTS:")
+print("--------------")
 
 
 # + All-Seasons Salt ($4.99)
