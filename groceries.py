@@ -28,8 +28,6 @@ products = [
 #print(products)
 # pprint(products)
 
-# TODO: write some Python code here to produce the desired output
-
 #Products Part 1
 
 print("--------------")
@@ -68,7 +66,6 @@ print("--------------")
 
 unique_departments.sort()
 
-
 for d in unique_departments:
     matching_products = [p for p in products if p["department"] == d]
     matching_products_count = len(matching_products)   
@@ -77,6 +74,11 @@ for d in unique_departments:
     else:
         label = "product"
     print(" + " + d.title() + " (" + str(matching_products_count) + " " + label + ")")
+
+
+
+
+
 
 # + All-Seasons Salt ($4.99)
 # + Chocolate Fudge Layer Cake ($18.50)
